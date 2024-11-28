@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BIGWIN</title>
+    <link rel="stylesheet" href="home.css" />
+
+  </head>
+  <body>
+    <h1>BIGWIN</h1>
+    <div id="balance" class="balance">
+      Balance: <span id="balanceAmount">Rs 1000.00</span>
+    </div>
+
+    <div class="button-container">
+      <button class="button" onclick="window.location.href='d.html'">
+        Withdraw
+      </button>
+      <button class="button" onclick="openProfilePopup()">Profile</button>
+    </div>
+
+    <div id="profilePopup" class="popup">
+      <p>You need to cross the level too</p>
+      <button class="close-btn" onclick="closePopup()">Close</button>
+    </div>
+
+    <!-- Level 1 -->
+    <div class="container">
+      <h2>Level 1</h2>
+      <p>Amount: Rs 10</p>
+      <p>Duration: 1 hour</p>
+      <p>Win Amount: Rs 20</p>
+      <input
+        id="input-1"
+        class="input-code"
+        type="text"
+        placeholder="Enter 5-digit code after payment"
+      />
+      <div class="button-container">
+        <button class="button" onclick="verifyCode(1, 'timer1')">Start</button>
+        <button class="button" onclick="window.location.href='deposit.html'">
+          Buy
+        </button>
+      </div>
+      <div class="error" id="error-1"></div>
+      <div class="timer" id="timer1"></div>
+    </div>
+
+    
+
+
+    <!-- Level 2 -->
+    <div class="container">
+      <h2>Level 2</h2>
+      <p>Amount: Rs 500</p>
+      <p>Duration: 1 minute</p>
+      <p>Win Amount: Rs 1000</p>
+      <input
+        id="input-2"
+        class="input-code"
+        type="text"
+        placeholder="Enter 5-digit code after payment"
+      />
+      <div class="button-container">
+        <button class="button" onclick="verifyCode(2, 'timer2')">Start</button>
+        <button class="button" onclick="window.location.href='deposit.html'">
+          Buy
+        </button>
+      </div>
+      <div class="error" id="error-2"></div>
+      <div class="timer" id="timer2"></div>
+    </div>
+
+    <!-- Level 3 -->
+    <div class="container">
+      <h2>Level 3</h2>
+      <p>Amount: Rs 1000</p>
+      <p>Duration: 1 minute</p>
+      <p>Win Amount: Rs 2000</p>
+      <input
+        id="input-3"
+        class="input-code"
+        type="text"
+        placeholder="Enter 5-digit code after payment"
+      />
+      <div class="button-container">
+        <button class="button" onclick="verifyCode(3, 'timer3')">Start</button>
+        <button class="button" onclick="window.location.href='deposit.html'">
+          Buy
+        </button>
+      </div>
+      <div class="error" id="error-3"></div>
+      <div class="timer" id="timer3"></div>
+    </div>
+
+    <!-- Error Popup -->
+    <div id="errorPopup" class="popup">
+      <p id="errorMessage"></p>
+      <button class="close-btn" onclick="closePopup()">
+        ONLY FOR ONE TIME TAP TO CLOSE
+      </button>
+    </div>
+  </body>
+</html>
